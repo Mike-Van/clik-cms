@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loyalties",
+  "info": {
+    "name": "Loyalty"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/loyalties",
+      "handler": "loyalty.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/loyalties/count",
+      "handler": "loyalty.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/loyalties/:id",
+      "handler": "loyalty.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/loyalties",
+      "handler": "loyalty.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/loyalties/:id",
+      "handler": "loyalty.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/loyalties/:id",
+      "handler": "loyalty.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
