@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl';
 import { get, upperFirst } from 'lodash';
 import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
-import { GET } from 'fetchier'
+import { POST } from 'fetchier'
 
 import useFetch from './hooks';
 import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
@@ -27,7 +27,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
 
   const handleClick = () => {
     setRequestToJenkin(true)
-    GET({ url: 'https://ciaws.clik.asia/jenkins/job/clik-website/job/clik-test.clik.asia/build?token=111e7e69164e75490a7c5be59aec9801f8' })
+    POST({ url: 'https://admin:118376ff46521e42c6cfb127476c7f01f6@ciaws.clik.asia/jenkins/job/clik-website/job/clik-test.clik.asia/build/?token\=111e7e69164e75490a7c5be59aec9801f8' })
       .then(res => {
         setRequestToJenkin()
         strapi.notification.success('site.build.success')
