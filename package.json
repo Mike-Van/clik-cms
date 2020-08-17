@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "fetchier": "0.0.31",
     "knex": "<0.20.0",
     "pg": "^8.3.0",
     "sqlite3": "latest",
