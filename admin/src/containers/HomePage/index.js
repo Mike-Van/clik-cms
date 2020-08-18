@@ -9,12 +9,10 @@ import { FormattedMessage } from 'react-intl';
 import { get, upperFirst } from 'lodash';
 import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
-import { POST } from 'fetchier'
+import { fetch } from 'fetchier'
 
 import useFetch from './hooks';
 import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
-import BlogPost from './BlogPost';
-import SocialLink from './SocialLink';
 
 const HomePage = ({ global: { plugins }, history: { push } }) => {
   const { error, isLoading, posts } = useFetch();
@@ -27,7 +25,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
 
   const handleClick = () => {
     setRequestToJenkin(true)
-    POST({ url: 'https://admin:118376ff46521e42c6cfb127476c7f01f6@ciaws.clik.asia/jenkins/job/clik-website/job/clik-test.clik.asia/build/?token\=111e7e69164e75490a7c5be59aec9801f8' })
+    fetch('http://localhost:5001/crm-mike/us-central1/trigger', { method: 'GET', mode: 'no-cors' })
       .then(res => {
         setRequestToJenkin()
         strapi.notification.success('site.build.success')
