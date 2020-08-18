@@ -25,7 +25,7 @@ const HomePage = ({ global: { plugins }, history: { push } }) => {
 
   const handleClick = () => {
     setRequestToJenkin(true)
-    fetch('http://localhost:5001/crm-mike/us-central1/trigger', { method: 'GET', mode: 'no-cors' })
+    fetch('https://us-central1-clik-1543905619703.cloudfunctions.net/trigger', { method: 'GET', mode: 'no-cors' })
       .then(res => {
         setRequestToJenkin()
         strapi.notification.success('site.build.success')

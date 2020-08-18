@@ -2,7 +2,7 @@
   "site.build.error": "Problem with deploying the site",
   "site.build.success": "Site deployment request succeeded",
   "site.build.header": "Read below instruction carefully !!!",
-  "site.build.description": "Pressing the below button will begin the deployment process of your current contents to the main https://clik.asia website. Please make sure your contents are correct, and thoroughly validated.",
+  "site.build.description": "Pressing the below button will begin the deployment process of your current contents to the main https://clik.asia website. Please make sure your contents are correct, and thoroughly validated. After the request succeeded, wait for about 10 minutes and clear the browser cache, then you should see the latest content.",
   "site.build.button": "Deploy site to production",
   "Analytics": "Analytics",
   "Auth.advanced.allow_register": "",
